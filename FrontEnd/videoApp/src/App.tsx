@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { Grid, GridItem, HStack, Show } from "@chakra-ui/react";
 import "./App.css";
 import { NavBar } from "./components/NavBar";
+import { ColorModeSwitch } from "./components/ColorModeSwitch";
+import { GameGrid } from "./components/GameGrid";
 
 function App() {
   return (
@@ -13,18 +15,21 @@ function App() {
         }}
         gap={6}
       >
-        <GridItem area="nav" >
-          <NavBar />
+        <GridItem area="nav">
+          <HStack justifyContent="space-between">
+            <NavBar />
+            <ColorModeSwitch />
+          </HStack>
         </GridItem>
-      
+
         <Show above="lg">
-          <GridItem area="aside" w="100%" h="10" bg="blue.500">
+          <GridItem area="aside" h="100vh" bg="red.500">
             Aside
           </GridItem>
         </Show>
 
-        <GridItem area="main" w="100%" h="50vh" bg="blue.500">
-          Main
+        <GridItem area="main" w="100%" h="100%" bg="blue.500">
+          <GameGrid />
         </GridItem>
       </Grid>
     </>
