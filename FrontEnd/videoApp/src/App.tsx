@@ -23,12 +23,12 @@ function App() {
         </GridItem>
 
         <Show above="lg">
-          <GridItem area="aside" h="100vh" bg="red.500">
+          <GridItem area="aside" h="100vh">
             Aside
           </GridItem>
         </Show>
 
-        <GridItem area="main" w="100%" h="100%" bg="blue.500">
+        <GridItem area="main" w="100%" h="100%" >
           <GameGrid />
         </GridItem>
       </Grid>
