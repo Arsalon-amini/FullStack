@@ -1,0 +1,1 @@
+cmmd + t => allows us to search for functions, classes, components
